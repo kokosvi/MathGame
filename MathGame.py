@@ -21,6 +21,7 @@ def calculate():
     #     lab1.destroy()
     # if (lab.winfo_exists()):
     #     lab.destroy()
+    #new comment
     if x + y == int(e.get()):
         lab = Label(root, text="Correct!")
         lab.grid(row=4, column=0)
