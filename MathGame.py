@@ -21,13 +21,13 @@ def calculate():
     #     lab1.destroy()
     # if (lab.winfo_exists()):
     #     lab.destroy()
-    #new comment
+
+    lab = Label(root)
+    lab.grid(row=4, column=0)
     if x + y == int(e.get()):
-        lab = Label(root, text="Correct!")
-        lab.grid(row=4, column=0)
+        lab['text'] = "Correct!"
     else:
-        lab = Label(root, text="Incorrect!")
-        lab.grid(row=4, column=0)
+        lab['text'] = "Incorrect!"
 
 def generate():
     global x
@@ -35,7 +35,7 @@ def generate():
     x = generateNum()
     y = generateNum()
     exercise.destroy()
-    exercise1 = Label(root, text=str(x) + " + " + str(y) + "=", anchor=CENTER, width=30, padx=5, pady=5)
+    exercise1 = Label(root, text=str(x) + " + " + str(y) + " =", anchor=CENTER, width=30, padx=5, pady=5)
     exercise1.grid(row=1, column=0, columnspan=2)
 
 
@@ -43,7 +43,7 @@ x = generateNum()
 y = generateNum()
 titlel = Label(root, text="Calculate this:", anchor=CENTER, width=30, padx=5, pady=5)
 titlel.grid(row=0, column=0, columnspan=2)
-exercise = Label(root, text=str(x) + " + " + str(y) + "=", anchor=CENTER, width=30, padx=5, pady=5)
+exercise = Label(root, text=str(x) + " + " + str(y) + " =", anchor=CENTER, width=30, padx=5, pady=5)
 exercise.grid(row=1, column=0, columnspan=2)
 e = Entry(root)
 e.grid(row=2, column=0, columnspan=2)
